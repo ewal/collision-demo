@@ -45,7 +45,6 @@ game.start(loader).then(async () => {
 
   const mainActor = new BaseCharacter();
   mainActor.pos = new Vector(game.halfDrawWidth, game.halfDrawHeight);
-  scene.mainActor = mainActor;
   game.currentScene.add(mainActor);
 
   game.currentScene.camera.clearAllStrategies();

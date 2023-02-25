@@ -1,13 +1,7 @@
 import { TiledMap, TiledMapResource } from '@excaliburjs/plugin-tiled';
 import { Engine, Scene } from 'excalibur';
-import BaseCharacter from '~src/characters/base_character';
-
-export enum CollisionObject {
-  OneWay = 'OneWay',
-}
 
 class BaseLevel extends Scene {
-  declare mainActor?: BaseCharacter;
   declare mapResource?: TiledMapResource;
   declare mapTileset?: TiledMap;
 
