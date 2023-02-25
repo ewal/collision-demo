@@ -10,3 +10,5 @@ While high in the air, let got of the jump button. From time to time, the Actor 
 The yellow box is a manually added box collider.
 
 [Screencast from 2023-02-25 23-05-30.webm](https://user-images.githubusercontent.com/676873/221381676-1af5d6d5-03ac-4d16-b1cb-402dc551df73.webm)
+
+[Kooha-2023-02-26-00-09-22.webm](https://user-images.githubusercontent.com/676873/221383764-666858d0-a058-42f8-9307-33eccb3b7e30.webm)
