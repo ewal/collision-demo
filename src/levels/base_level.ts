@@ -16,15 +16,15 @@ class BaseLevel extends Scene {
     this.mapResource = map;
   }
 
-  public async addMap(): Promise<void> {
+  public addMap(): void {
     if (this.mapResource) {
       this.mapResource.addTiledMapToScene(this.engine.currentScene);
     }
   }
 
-  override async onInitialize(engine: Engine): Promise<void> {
+  override onInitialize(engine: Engine): void {
     super.onInitialize(engine);
-    await this.addMap();
+    this.addMap();
   }
 
   static async build(mapResource: TiledMapResource): Promise<BaseLevel> {
