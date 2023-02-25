@@ -1,0 +1,41 @@
+{
+  "name": "excalibur-parcel-template",
+  "version": "1.0.0",
+  "author": "Emil Löfquist",
+  "license": "MIT",
+  "scripts": {
+    "start": "rm -rf .parcel-cache && parcel --no-cache ./src/index.html --log-level verbose",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@excaliburjs/dev-tools": "^0.27.1",
+    "@parcel/resolver-glob": "^2.8.3",
+    "@parcel/transformer-glsl": "2.8.3",
+    "@parcel/types": "^2.8.3",
+    "@types/node": "^18.7.8",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.30.6",
+    "buffer": "^5.5.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "parcel": "^2.8.3",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "prettier": "^2.8.3",
+    "typescript": "4.9.5"
+  },
+  "staticFiles": {
+    "staticOutPath": "."
+  },
+  "alias": {
+    "src": "./src",
+    "static": "./static"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "yarn": "1.22.19"
+  },
+  "dependencies": {
+    "@excaliburjs/plugin-tiled": "^0.27.0",
+    "excalibur": "^0.27.0"
+  }
+}
