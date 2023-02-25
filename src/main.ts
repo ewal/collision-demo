@@ -36,7 +36,7 @@ class Game extends Engine {
 const game = new Game();
 const loader = new Loader();
 
-game.showDebug(false);
+game.showDebug(true);
 
 game.start(loader).then(async () => {
   const scene = await Levels.Level2.build();
@@ -55,7 +55,7 @@ game.on('fallbackgraphicscontext', (ctx) => {
   console.log('fallback triggered', ctx);
 });
 
-const devtool = new DevTool(game);
-console.log('devtool', devtool);
+// const devtool = new DevTool(game);
+// console.log('devtool', devtool);
 
 export { game };
