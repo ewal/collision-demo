@@ -52,7 +52,7 @@ class BaseCharacter extends Actor {
   };
 
   override onPreUpdate(_engine: Engine, delta: number): void {
-    const deltaTime = delta / 1000;
+    const deltaTime = delta * 0.001;
 
     // Acceleration
     if (
