@@ -85,6 +85,10 @@ class BaseCharacter extends Actor {
       this.vel.y = -(250 + Math.abs(this.vel.x) * 0.5);
     }
   }
+
+  // override onPostUpdate(_engine: Engine, _delta: number): void {
+  //   this.vel.y = Math.min(this.vel.y, 800);
+  // }
 }
 
 export default BaseCharacter;
