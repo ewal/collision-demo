@@ -55,9 +55,7 @@ export default class InputState {
   }
 
   private handleHold = (event: KeyEvent): void => {
-    if (ACTION_KEYS.has(event.key)) {
-      this.handleKey(event.key, true);
-    }
+    this.handleKey(event.key, true);
   };
 
   private handleRelease = (event: KeyEvent): void => {
