@@ -14,8 +14,8 @@ export default class InputState {
     this.keyMap = new Map();
     this.keyStates = new Map();
 
-    engine.input.keyboard.on('hold', this.handleHold);
-    engine.input.keyboard.on('release', this.handleRelease);
+    engine.input.keyboard.on('hold', this.handleKey(true));
+    engine.input.keyboard.on('release', this.handleKey(false));
   }
 
   public static getInstance(engine?: Engine): InputState {
@@ -54,19 +54,13 @@ export default class InputState {
     return this.keyStates.get(Input.Keys.D);
   }
 
-  private handleHold = (event: KeyEvent): void => {
-    this.handleKey(event.key, true);
-  };
+  private handleKey =
+    (state: boolean) =>
+    (event: KeyEvent): void => {
+      if (this.keyStates.get(event.key) === state) {
+        return;
+      }
 
-  private handleRelease = (event: KeyEvent): void => {
-    this.handleKey(event.key, false);
-  };
-
-  private handleKey = (key: Input.Keys, state: boolean): void => {
-    if (this.keyStates.get(key) === state) {
-      return;
-    }
-
-    this.keyStates.set(key, state);
-  };
+      this.keyStates.set(event.key, state);
+    };
 }
